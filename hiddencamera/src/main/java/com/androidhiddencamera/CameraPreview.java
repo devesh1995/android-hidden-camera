@@ -87,7 +87,7 @@ class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
         // Now that the size is known, set up the camera parameters and begin the preview.
         Camera.Parameters parameters = mCamera.getParameters();
 
-        List<Camera.Size> pictureSizes = mCamera.getParameters().getSupportedPictureSizes();
+       /* List<Camera.Size> pictureSizes = mCamera.getParameters().getSupportedPictureSizes();
 
         //set the preview sizes that are the lowest, as we don't have to display the preview.
         parameters.setPreviewSize(pictureSizes.get(pictureSizes.size() - 1).width,
@@ -109,7 +109,7 @@ class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
                 throw new RuntimeException("Invalid camera resolution.");
         }
         parameters.setPictureSize(cameraSize.width, cameraSize.height);
-
+*/
         requestLayout();
         mCamera.setParameters(parameters);
 
